@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <script src="https://kit.fontawesome.com/6bb5208a7a.js" crossorigin="anonymous"></script>
+  <title>Ayush work</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kenia&family=Lobster&family=Nerko+One&family=Source+Code+Pro:wght@200&family=Zen+Dots&display=swap');
+
+    body {
+      background-color: black;
+    }
+
+    /* desktop */
+    @media (min-width: 1000px) {
+      .con1 {
+        background-image: url(image/Ayush-modified.png);
+        width: 100%;
+        height: 100%;
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-color: black;
+        position: fixed;
+      }
+    }
+
+    /* mobile view */
+    @media (max-width: 800px) {
+      .con1 {
+        background-image: url(image/Ayush.png);
+        background-position-x: left;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: black;
+        position: fixed;
+      }
+    }
+
+    /* mobile view hello */
+    @media (max-width: 800px) {
+      .but {
+        color: aliceblue;
+        background-color: transparent;
+        margin-top: 60%;
+       border-color: transparent;
+        font-size: 4rem;
+        font-weight: 700;
+
+      }
+
+      .but1 {
+        color: red;
+        background-color: transparent;
+        border-color: transparent;
+        font-size: 3rem;
+        font-weight: 700;
+
+      }
+    }
+
+    /* desktop view hello */
+    @media (min-width: 1000px) {
+      .but {
+        color: aliceblue;
+        background-color: black;
+        margin-top: 12%;
+        margin-left: 15%;
+        font-size: 9rem;
+        font-weight: 700;
+
+      }
+
+      .but1 {
+        color: red;
+        background-color: black;
+        margin-left: 15%;
+        font-size: 5rem;
+        font-weight: 700;
+      }
+
+    }
+
+    @media (max-width: 800px) {
+  .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+ 
+.mtp{
+  margin-top: 7rem;
+}
+
+@media(min-width:600px){
+  
+.hdn{
+  opacity: 0;
+ 
+ 
+}}
+
+
+  </style>
+</head>
+
+<body>
+
+  
+  <div class="con1">
+
+    <div class="container">
+      <div>
+        <button class="but" id="btn1">Hello,</button>
+        <br>
+        <button class="but1" id="btn2">I am </button>
+        <br>
+        <button class="but1" id="btn3">Ayush</button>
+      </div>
+    </div>
+
+  
+    <div class="hdn">
+      <i class="fa-regular d-flex mtp justify-content-center  fa-bounce text-light">Tap anywhere</i>
+    </div>
+  </div>
+  
+
+<script>
+ 
+
+      // for phone view
+    
+      function myFunction(x) {
+      if (x.matches) {
+      function changeText() {
+      var xx = document.getElementById("btn1");
+      var aa = document.getElementById("btn2");
+      var yy = document.getElementById("btn3");
+      xx.innerHTML = "About.";
+      aa.innerHTML = "work.";
+      yy.innerHTML = "contact.";
+    }
+    document.addEventListener("click", changeText); 
+
+     function change() {
+      var cc = document.getElementById("btn1");
+      var aa = document.getElementById("btn2");
+      var yy = document.getElementById("btn3");
+      cc.innerHTML = "Hello,";
+      aa.innerHTML = "I am ";
+      yy.innerHTML = "Ayush";
+    }
+    document.addEventListener("dblclick", change);}
+
+    else{
+       
+    let button = document.getElementById("btn1");
+    button.addEventListener("mouseover", function() {
+    button.innerHTML = "About.";
+    });
+    let but = document.getElementById("btn1");
+    but.addEventListener("mouseout", function() {
+     but.innerHTML = "Hello,";
+    });
+
+    // i am
+    let iam = document.getElementById("btn2");
+    iam.addEventListener("mouseover", function() {
+    iam.innerHTML = "Work.";
+    });
+    let iam2 = document.getElementById("btn2");
+    iam2.addEventListener("mouseout", function() {
+    iam2.innerHTML = "I am";
+    });
+
+    // Ayush
+    let Ayush= document.getElementById("btn3");
+    Ayush.addEventListener("mouseover", function() {
+    Ayush.innerHTML = "Contact.";
+    });
+    let Ayush2 = document.getElementById("btn3");
+    Ayush2.addEventListener("mouseout", function() {
+    Ayush2.innerHTML = "Ayush";
+    });
+    }
+  
+  
+  }
+
+  var x = window.matchMedia("(max-width: 600px)")
+  myFunction(x) 
+  x.addEventListener(myFunction) 
+
+
+
+
+    
+  //  for desktop view
+
+  // hello
+     
+    // let button = document.getElementById("btn1");
+    // button.addEventListener("mouseover", function() {
+    // button.innerHTML = "About.";
+    // });
+    // let but = document.getElementById("btn1");
+    // but.addEventListener("mouseout", function() {
+    //  but.innerHTML = "Hello,";
+    // });
+
+    // // i am
+    // let iam = document.getElementById("btn2");
+    // iam.addEventListener("mouseover", function() {
+    // iam.innerHTML = "Work.";
+    // });
+    // let iam2 = document.getElementById("btn2");
+    // iam2.addEventListener("mouseout", function() {
+    // iam2.innerHTML = "I am";
+    // });
+
+    // // Ayush
+    // let Ayush= document.getElementById("btn3");
+    // Ayush.addEventListener("mouseover", function() {
+    // Ayush.innerHTML = "Contact.";
+    // });
+    // let Ayush2 = document.getElementById("btn3");
+    // Ayush2.addEventListener("mouseout", function() {
+    // Ayush2.innerHTML = "Ayush";
+    // });
+
+
+
+
+
+
+
+
+
+   
+    
+</script>
+</body>
+
+</html>
