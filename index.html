@@ -31,32 +31,40 @@
         background-repeat: no-repeat;
         background-color: black;
         position: fixed;
+        animation: zoom-in-zoom-out 1s ease-in-out;
       }
     }
 
     /* mobile view */
-    @media (max-width: 800px) {
+    @media (max-width: 999px) {
       .con1 {
         background-image: url(image/Ayush.png);
         background-position-x: left;
         width: 100%;
         height: 100%;
+        margin-left: 8%;
         background-size: cover;
         background-repeat: no-repeat;
         background-color: black;
         position: fixed;
-      }
-    }
+        animation: zoom-in-zoom-out 1s ease-in-out;
+      }}
+
+       
+         
+     
+  
 
     /* mobile view hello */
-    @media (max-width: 800px) {
+    @media (max-width: 999px) {
       .but {
         color: aliceblue;
         background-color: transparent;
-        margin-top: 60%;
-       border-color: transparent;
+        margin-top: 45%;
+        border-color: transparent;
         font-size: 4rem;
         font-weight: 700;
+        
 
       }
 
@@ -66,6 +74,7 @@
         border-color: transparent;
         font-size: 3rem;
         font-weight: 700;
+        margin-left: 3%;
 
       }
     }
@@ -74,43 +83,86 @@
     @media (min-width: 1000px) {
       .but {
         color: aliceblue;
-        background-color: black;
+        background-color: transparent;
         margin-top: 12%;
         margin-left: 15%;
-        font-size: 9rem;
+        font-size: 8rem;
         font-weight: 700;
 
       }
 
       .but1 {
         color: red;
-        background-color: black;
+        background-color: transparent;
         margin-left: 15%;
-        font-size: 5rem;
+        margin-top: 2%;
+        font-size: 4rem;
         font-weight: 700;
       }
 
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 999px) {
   .btn {
     display: block;
     margin: 0 auto;
   }
-}
+  }
  
-.mtp{
-  margin-top: 7rem;
-}
+   .mtp{
+  margin-top: 12rem;
+  }
 
-@media(min-width:600px){
+   @media(min-width:1000px){
   
-.hdn{
+  .hdn{
   opacity: 0;
  
  
-}}
+  }}
 
+
+/* transition on text */
+
+.trans1{
+
+position: relative;
+animation: moveby 2s;
+}
+
+
+@keyframes moveby{
+from{top: 100px;}
+to{top: 0px;}
+}
+
+
+/* /* transition on image  */
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* hover on text */
+
+@media (min-width: 1000px) {
+   .texthover {
+  transition: transform .5s ease-in-out;
+  transform: scale(1.4);
+  transform-origin: 100% 0;
+}
+
+.texthover:hover  {
+  transform: scale(1.5) translateX(12%);
+}}
 
   </style>
 </head>
@@ -118,21 +170,21 @@
 <body>
 
   
-  <div class="con1">
+  <div class="con1 ">
 
     <div class="container">
       <div>
-        <button class="but" id="btn1">Hello,</button>
+       <a href="about.html"><button class="but trans1 texthover" id="btn1">Hello,</button></a> 
         <br>
-        <button class="but1" id="btn2">I am </button>
+        <button class="but1 trans1 texthover" id="btn2">I am </button>
         <br>
-        <button class="but1" id="btn3">Ayush</button>
+        <button class="but1 trans1 texthover" id="btn3">Ayush</button>
       </div>
     </div>
 
   
     <div class="hdn">
-      <i class="fa-regular d-flex mtp justify-content-center  fa-bounce text-light">Tap anywhere</i>
+      <i class=" d-flex mtp justify-content-center  fa-bounce text-light"  id="tap">Tap anywhere</i>
     </div>
   </div>
   
@@ -144,28 +196,37 @@
     
       function myFunction(x) {
       if (x.matches) {
-      function changeText() {
-      var xx = document.getElementById("btn1");
-      var aa = document.getElementById("btn2");
-      var yy = document.getElementById("btn3");
-      xx.innerHTML = "About.";
-      aa.innerHTML = "work.";
-      yy.innerHTML = "contact.";
-    }
-    document.addEventListener("click", changeText); 
+        function changeContent() {
+  var xx = document.getElementById('btn1');
+  var aa = document.getElementById('btn2');
+  var yy = document.getElementById('btn3');
+  var taps = document.getElementById('tap');
 
-     function change() {
-      var cc = document.getElementById("btn1");
-      var aa = document.getElementById("btn2");
-      var yy = document.getElementById("btn3");
-      cc.innerHTML = "Hello,";
-      aa.innerHTML = "I am ";
-      yy.innerHTML = "Ayush";
-    }
-    document.addEventListener("dblclick", change);}
+  if (taps.innerHTML === 'Tap Tap') {
+    taps.innerHTML = 'Tap anywhere';
+    xx.innerHTML = 'Hello,';
+    aa.innerHTML = 'I am ';
+    yy.innerHTML = 'Ayush';
+  } else {
+    taps.innerHTML = 'Tap Tap';
+    xx.innerHTML = 'About.';
+    aa.innerHTML = 'work.';
+    yy.innerHTML = 'contact.';
+  }
+}
+
+document.addEventListener('click', changeContent);
+
+
+
+      }
+
+    
+  
 
     else{
-       
+
+      //  hello
     let button = document.getElementById("btn1");
     button.addEventListener("mouseover", function() {
     button.innerHTML = "About.";
@@ -199,13 +260,32 @@
   
   }
 
-  var x = window.matchMedia("(max-width: 600px)")
+  var x = window.matchMedia("(max-width: 1000px)")
   myFunction(x) 
   x.addEventListener(myFunction) 
 
+  // tap anywhere
+
+
+  // function tapp(){
+  //   var taps = document.getElementById("tap");
+  //   taps.innerHTML="Double tap";
+
+  // }
+
+  // document.addEventListener("click", tapp); 
 
 
 
+  // function changeText() {
+  //     var xx = document.getElementById("btn1");
+  //     var aa = document.getElementById("btn2");
+  //     var yy = document.getElementById("btn3");
+  //     xx.innerHTML = "About.";
+  //     aa.innerHTML = "work.";
+  //     yy.innerHTML = "contact.";
+  //   }
+  //   document.addEventListener("click", changeText); 
     
   //  for desktop view
 
