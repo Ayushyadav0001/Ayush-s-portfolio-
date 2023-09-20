@@ -2,323 +2,393 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/6bb5208a7a.js" crossorigin="anonymous"></script>
   <title>Ayush work</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kenia&family=Lobster&family=Nerko+One&family=Source+Code+Pro:wght@200&family=Zen+Dots&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Kenia&family=Lobster&family=Nerko+One&family=Source+Code+Pro:wght@200&family=Zen+Dots&display=swap");
 
-    body {
-      background-color: black;
+    .fixed-bott {
+      position: fixed;
+      right: 0;
+      bottom: 15px;
+
+      z-index: 1030;
     }
-
-    /* desktop */
-    @media (min-width: 1000px) {
-      .con1 {
-        background-image: url(image/Ayush-modified.png);
-        width: 100%;
-        height: 100%;
-        background-position-x: right;
-        background-repeat: no-repeat;
-        background-color: black;
-        position: fixed;
-        animation: zoom-in-zoom-out 1s ease-in-out;
-      }
-    }
-
-    /* mobile view */
-    @media (max-width: 999px) {
-      .con1 {
-        background-image: url(image/Ayush.png);
-        background-position-x: left;
-        width: 100%;
-        height: 100%;
-        margin-left: 8%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: black;
-        position: fixed;
-        animation: zoom-in-zoom-out 1s ease-in-out;
-      }}
-
-       
-         
-     
-  
-
-    /* mobile view hello */
-    @media (max-width: 999px) {
-      .but {
-        color: aliceblue;
-        background-color: transparent;
-        margin-top: 45%;
-        border-color: transparent;
-        font-size: 4rem;
-        font-weight: 700;
-        
-
-      }
-
-      .but1 {
-        color: red;
-        background-color: transparent;
-        border-color: transparent;
-        font-size: 3rem;
-        font-weight: 700;
-        margin-left: 3%;
-
-      }
-    }
-
-    /* desktop view hello */
-    @media (min-width: 1000px) {
-      .but {
-        color: aliceblue;
-        background-color: transparent;
-        margin-top: 12%;
-        margin-left: 15%;
-        font-size: 8rem;
-        font-weight: 700;
-
-      }
-
-      .but1 {
-        color: red;
-        background-color: transparent;
-        margin-left: 15%;
-        margin-top: 2%;
-        font-size: 4rem;
-        font-weight: 700;
-      }
-
-    }
-
-    @media (max-width: 999px) {
-  .btn {
-    display: block;
-    margin: 0 auto;
-  }
-  }
- 
-   .mtp{
-  margin-top: 12rem;
-  }
-
-   @media(min-width:1000px){
-  
-  .hdn{
-  opacity: 0;
- 
- 
-  }}
-
-
-/* transition on text */
-
-.trans1{
-
-position: relative;
-animation: moveby 2s;
-}
-
-
-@keyframes moveby{
-from{top: 100px;}
-to{top: 0px;}
-}
-
-
-/* /* transition on image  */
-
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* hover on text */
-
-@media (min-width: 1000px) {
-   .texthover {
-  transition: transform .5s ease-in-out;
-  transform: scale(1.4);
-  transform-origin: 100% 0;
-}
-
-.texthover:hover  {
-  transform: scale(1.5) translateX(12%);
-}}
-
   </style>
 </head>
 
 <body>
+  <!-- home page section -->
+  <section>
+    <div class="con1">
+      <div class="container-fluid">
 
-  
-  <div class="con1 ">
 
-    <div class="container">
-      <div>
-       <a href="about.html"><button class="but trans1 texthover" id="btn1">Hello,</button></a> 
-        <br>
-        <button class="but1 trans1 texthover" id="btn2">I am </button>
-        <br>
-        <button class="but1 trans1 texthover" id="btn3">Ayush</button>
+        <!-- soptify -->
+        <div class="fixed-bott d-none d-lg-block">
+
+          <button class="text-light btn glow-button p-0 " style="height: 80px; width: 80px; border-radius: 2rem"
+            id="cod">Wanna hear some music
+          </button>
+          <div id="playlist-code">
+            <iframe style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/0D5sKFIARwKqqxofQYaaAS?utm_source=generator&theme=0"
+              width="100%" height="352" frameborder="0" allowfullscreen=""
+              allow="autoplay;  encrypted-media;  picture-in-picture" loading="loading"></iframe>
+          </div>
+        </div>
+        <!-- end's here -->
+
+
+        <section id="any">
+          <div class="spo">
+
+            <button class="but trans1 texthover" id="btn1">Hello,</button>
+
+            <br />
+            <button class="but1 trans1 texthover mt-0 mt-lg-5" id="btn2">
+              I am
+            </button>
+            <br />
+            <button class="but1 trans1 texthover mt-0 mt-lg-5" id="btn3">
+              Ayush
+            </button>
+
+          </div>
+          <button class="d-lg-none bg-transparent text-light border-0 mt-3"
+            style="position: absolute; left: 40%; bottom: 8%;" id="tap">Tap anywhere</button>
+
       </div>
-    </div>
+  </section>
+  </section>
+  <!-- home page section end's here -->
 
-  
-    <div class="hdn">
-      <i class=" d-flex mtp justify-content-center  fa-bounce text-light"  id="tap">Tap anywhere</i>
+
+  <!-- about page start from here -->
+  <div class="about-page  " id="aboutPage" style="color: rgb(176, 172, 172);">
+    <div class="container ">
+
+      <!-- About Navbar -->
+      <section id="navb">
+        <nav class="navbar navbar-expand navbar-dark bg-transparent float-end  ">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav me-5 gap-0 gap-lg-4 fs-6 fw-bolder text-danger fst-italic">
+                <li class="nav-item">
+                  <a class="nav-link active text-danger" aria-current="page" href="#">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-danger" href="#education">EDUCATION</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-danger" href="#skills">SKILLS</a>
+                </li>
+
+              </ul>
+            </div>
+            <a class=" close-button me-2 fs-2 fw-bolder" id="closeButton" href="#">HOME</a>
+          </div>
+        </nav>
+      </section>
+      <!--  About Navbar end's here -->
+
+
+      <!-- About content start from here -->
+      <div style="padding-top: 100px">
+        <div class="border-1 border-success">
+          <i class="">
+            <h1 class="fs-1 text-danger text-decoration-underline " id="aboutnew">About</h1>
+          </i>
+
+          <p class="mt-3 font-monospace fs-5 fw-bold ">
+            Welcome to my portfolio! I'm delighted to share my journey as a web
+            developer, where I have honed my skills and expertise in creating
+            impactful digital solutions. With a strong foundation in both
+            front-end and back-end development, I possess a comprehensive
+            understanding of the entire web development process, from concept to
+            deployment.
+            <br />
+            <br />
+            Beyond my technical skills, I am a creative problem solver who thrives
+            in dynamic and challenging environments. I possess a keen eye for
+            detail, allowing me to identify potential bottlenecks or areas for
+            improvement within a project. I approach each task with a growth
+            mindset, continually seeking opportunities for personal and
+            professional development to stay ahead in this ever-evolving industry.
+          </p>
+
+          <ul class="d-flex gap-5 justify-content-center fs-5 mt-5">
+            <div>
+              <li> <strong> <span class="text-danger"> Age: </span> </strong> <span> 23
+                </span>
+              </li>
+              <li> <strong> <span class="text-danger"> Residence: </span> </strong> <span>
+                  INDIA </span></li>
+              <li> <strong> <span class="text-danger"> Freelance: </span> </strong> <span>
+                  Available </span></li>
+            </div>
+
+            <div>
+              <li> <strong> <span class="text-danger"> Address: </span> </strong> <span>
+                  BHOPAL
+                </span></li>
+              <li> <strong> <span class="text-danger"> Phone: </span> </strong> <span>
+                  +91
+                  8349208811 </span></li>
+              <li> <strong> <span class="text-danger"> E-mail: </span> </strong> <span>
+                  ayushyadav@9990.com </span></li>
+            </div>
+          </ul>
+
+        </div>
+      </div>
+      <!-- EDUCATION start from here -->
+      <section id="education" style="margin-top: 10%;">
+
+        <div class="mt-5">
+          <h1 class="text-danger text-decoration-underline">Education</h1>
+          <span class="pt-5">STUDIED AT</span>
+
+
+          <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+
+
+                <h1 class="text-danger mt-5 text-decoration-underline">Sagar institue of science & <br> technology
+                </h1>
+
+                <h1 class=" text-danger"> civil engineering </h1>
+                <p class="">Civil engineering is a professional engineering
+                  discipline <br>that deals with the
+                  design, construction, and maintenance of the physical and naturally built
+                  environment, <br> including public works such as roads, bridges, canals, dams,
+                  airports,
+                  sewage systems, pipelines, structural components of buildings, and railways.</p>
+              </div>
+              <div class="carousel-item">
+                <h1 class="text-danger text-decoration-underline">Train it institue</h1>
+
+                <h1 class="text-danger"> web developing course </h1>
+                <p class="crouselpara crouselpara2">Web development refers to the creating,
+                  building, <br>
+                  and maintaining of websites. It
+                  includes aspects such <br> as web design, web publishing, web programming, and
+                  database
+                  management. <br> It is the creation of an application that works over the internet
+                  i.e.
+                  websites.</p>
+              </div>
+              <div class="carousel-item">
+                <h1 class="text-danger text-decoration-underline">Train it institue</h1>
+
+                <h1 class="text-danger"> programming course </h1>
+                <p class="">Programming refers to a technological process
+                  for <br>
+                  telling a computer which tasks to
+                  perform in order <br> to solve problems. You can think of programming as a
+                  collaboration <br>
+                  between humans and computers, <br> in which humans create instructions for a computer
+                  to
+                  follow (code) in a language computers can understand.</p>
+              </div>
+            </div>
+            <button class="carousel-control-prev crouselclass" type="button"
+              data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next crouselclass" type="button"
+              data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- education end's here -->
+
+
+      <!-- skills section -->
+
+      <!-- desgining skills -->
+      <section id="skills" style="margin-top: 10%;">
+
+        <h1 class="text-danger text-decoration-underline">Design Skills</h1>
+        <span class="story">CREATIVE ABILITY</span> <br>
+
+
+        <div class="d-lg-flex justify-content-center text-center gap-5 " style="margin-top: 5%;">
+          <div>
+            <span class="text-danger fs-3"> Web layout
+            </span>
+
+            <p class="serviceselementsp serviceselementsm ">A website layout is the arrangement
+              of
+              all visual elements <br> on a webpage. Through the intentional positioning of <br> page
+              elements.
+            </p>
+            <div class="progress" style="height: 1px;">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div>
+            <span class="text-danger fs-3"> Photoshop</span>
+            <p class="serviceselementsp serviceselementsm ">Photoshop is an image creation,
+              graphic
+              design and photo editing software <br> developed by Adobe. The software provides many
+              image <br>editing features for pixel-based images.
+            </p>
+            <div class="progress" style="height: 1px;">
+              <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <!-- designing end's skills -->
+
+        <!-- language skills -->
+
+        <div style="margin-top: 10%;">
+          <h1 class="text-danger text-decoration-underline">Language Skills</h1>
+          <span class="">READING AND WRITING</span>
+
+
+          <div class="text-center d-lg-flex justify-content-center gap-5" style="margin-top: 5%;">
+
+            <div>
+              <h2 class="text-danger">ENGLISH</h2>
+              <p class="">The English language is an
+                Indo-European language in the West Germanic language group. Modern English
+                is
+                widely considered to be the lingua franca of the world and is the standard
+                language in a wide variety of fields, including computer coding,
+              </p>
+            </div>
+            <div>
+              <h2 class="text-danger"> HINDI</h2>
+              <p class="serviceselementsp serviceselementsm">It is the main language in India.
+                About 800 million people speak Hindi in India. The Devanāgarī script is used
+                to
+                write Hindi. Previously Hindi was known as Hindui.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- language end's skills -->
+
+
+        <!-- coding skills -->
+
+        <div class="" style="margin-top: 10%;">
+
+          <h1 class=" text-danger text-decoration-underline">Coding Skills</h1>
+          <span class="">DEVELOPING ON</span>
+
+          <div class="d-lg-flex gap-5 justify-content-center text-center" style="margin-top: 5%;">
+            <div>
+              <h2 class="text-danger">HTML, CSS
+              </h2>
+              <p class="">
+                HTML (HyperText Markup Language) is the backbone of web content, providing structure and semantics. CSS
+                (Cascading Style Sheets) enhances HTML by controlling layout and design. Bootstrap, a popular CSS
+                framework, streamlines web development with pre-designed components, grids, and responsive features,
+                empowering developers to create attractive and responsive websites efficiently.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-danger">JavaScript</h2>
+              <p>
+                JavaScript is a versatile programming language used in web development. It enables interactive and
+                dynamic web content by allowing manipulation of HTML and CSS, making web pages responsive to user
+                actions. JavaScript is crucial for creating web applications, enhancing user experience, and adding
+                functionality like form validation and animations.</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <h2 class="text-danger">MYSQL
+            </h2>
+            <p>
+              MySQL is an open-source relational database management system (RDBMS). It's widely used for storing and
+              retrieving data in web applications and software. MySQL offers robust data management, support for SQL
+              queries, and scalability. It's trusted by businesses for efficient data storage and retrieval, making it a
+              core component of many web applications.
+            </p>
+          </div>
+        </div>
+
     </div>
+    <!-- coding end's skills -->
+    </section>
+
   </div>
-  
+  </div>
+  </div>
 
-<script>
- 
 
-      // for phone view
+
+  <!-- contact section -->
+
+
+  <section id="contactpage" class="contact-page">
     
-      function myFunction(x) {
-      if (x.matches) {
-        function changeContent() {
-  var xx = document.getElementById('btn1');
-  var aa = document.getElementById('btn2');
-  var yy = document.getElementById('btn3');
-  var taps = document.getElementById('tap');
-
-  if (taps.innerHTML === 'Tap Tap') {
-    taps.innerHTML = 'Tap anywhere';
-    xx.innerHTML = 'Hello,';
-    aa.innerHTML = 'I am ';
-    yy.innerHTML = 'Ayush';
-  } else {
-    taps.innerHTML = 'Tap Tap';
-    xx.innerHTML = 'About.';
-    aa.innerHTML = 'work.';
-    yy.innerHTML = 'contact.';
-  }
-}
-
-document.addEventListener('click', changeContent);
-
-
-
-      }
-
+    <a class=" close-button me-2 fs-2 fw-bolder float-end" id="closebutton" href="#">HOME</a>
     
+    <div class="pt-5 text-dark">
+      <div class="container-fluid pt-5 d-md-flex justify-content-md-evenly" >
+        <div class="pt-md-3 mx-md-5">
+          <h1 class="pt-3 text-danger">CONTACT DETAILS</h1>
+          <p class="ms-4 text-danger fs-5 fw-bold"> Get in touch using the <br> contact details below. 
+           </p>
+         
+          <ul class="ms-3 mt-4 text-light">
+            <li>BHOPAL INDIA (462030)</li>
+            <li>
+              +91 8349208811 , +91 9669278204</li>
+            <li>
+             ayushyadav9990@gmail.com</li>
+          </ul>
+        </div>
+        <div class="pb-3 pt-md-2 me-md-5 ">
+          <form novalidate class="needs-validation">
+            <input type="text" class="form-control  mt-4" id="username" placeholder="Name" required />
+            <input type="email" class="form-control  mt-5" id="email" placeholder="E-mail" required />
+            <textarea class="form-control mt-5" rows="20" cols="80" placeholder="Your Message"
+              style="height: 150px;"></textarea>
+            <div class="d-flex">
+             
+             
+            </div>
+
+            <div class="mt-5 d-flex justify-content-center"> <button class="btn btn-light w-50 ">SUBMIT</button>
+        </div>
+        </form>
+      </div>
+
+
+    </div>
+  </section> 
   
-
-    else{
-
-      //  hello
-    let button = document.getElementById("btn1");
-    button.addEventListener("mouseover", function() {
-    button.innerHTML = "About.";
-    });
-    let but = document.getElementById("btn1");
-    but.addEventListener("mouseout", function() {
-     but.innerHTML = "Hello,";
-    });
-
-    // i am
-    let iam = document.getElementById("btn2");
-    iam.addEventListener("mouseover", function() {
-    iam.innerHTML = "Work.";
-    });
-    let iam2 = document.getElementById("btn2");
-    iam2.addEventListener("mouseout", function() {
-    iam2.innerHTML = "I am";
-    });
-
-    // Ayush
-    let Ayush= document.getElementById("btn3");
-    Ayush.addEventListener("mouseover", function() {
-    Ayush.innerHTML = "Contact.";
-    });
-    let Ayush2 = document.getElementById("btn3");
-    Ayush2.addEventListener("mouseout", function() {
-    Ayush2.innerHTML = "Ayush";
-    });
-    }
-  
-  
-  }
-
-  var x = window.matchMedia("(max-width: 1000px)")
-  myFunction(x) 
-  x.addEventListener(myFunction) 
-
-  // tap anywhere
-
-
-  // function tapp(){
-  //   var taps = document.getElementById("tap");
-  //   taps.innerHTML="Double tap";
-
-  // }
-
-  // document.addEventListener("click", tapp); 
-
-
-
-  // function changeText() {
-  //     var xx = document.getElementById("btn1");
-  //     var aa = document.getElementById("btn2");
-  //     var yy = document.getElementById("btn3");
-  //     xx.innerHTML = "About.";
-  //     aa.innerHTML = "work.";
-  //     yy.innerHTML = "contact.";
-  //   }
-  //   document.addEventListener("click", changeText); 
-    
-  //  for desktop view
-
-  // hello
-     
-    // let button = document.getElementById("btn1");
-    // button.addEventListener("mouseover", function() {
-    // button.innerHTML = "About.";
-    // });
-    // let but = document.getElementById("btn1");
-    // but.addEventListener("mouseout", function() {
-    //  but.innerHTML = "Hello,";
-    // });
-
-    // // i am
-    // let iam = document.getElementById("btn2");
-    // iam.addEventListener("mouseover", function() {
-    // iam.innerHTML = "Work.";
-    // });
-    // let iam2 = document.getElementById("btn2");
-    // iam2.addEventListener("mouseout", function() {
-    // iam2.innerHTML = "I am";
-    // });
-
-    // // Ayush
-    // let Ayush= document.getElementById("btn3");
-    // Ayush.addEventListener("mouseover", function() {
-    // Ayush.innerHTML = "Contact.";
-    // });
-    // let Ayush2 = document.getElementById("btn3");
-    // Ayush2.addEventListener("mouseout", function() {
-    // Ayush2.innerHTML = "Ayush";
-    // });
+  <!-- contact end's section -->
 
 
 
@@ -328,9 +398,19 @@ document.addEventListener('click', changeContent);
 
 
 
-   
-    
-</script>
+
+  <!-- j query -->
+
+  <script></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+  <script src="animate.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
